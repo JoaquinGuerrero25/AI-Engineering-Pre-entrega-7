@@ -1,0 +1,29 @@
+services:
+  redis:
+    image: redis/redis-stack-server:latest   # incluye RedisJSON + RediSearch (requeridos por RedisSaver)
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  phoenix:
+    image: arizephoenix/phoenix:latest       # UI en http://localhost:6006 (OTLP HTTP en /v1/traces)
+    ports: ["6006:6006", "4317:4317"]
+    volumes: [phoenix_data:/mnt/data]
+    environment:
+      PHOENIX_WORKING_DIR: /mnt/data
+
+  api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: [.env]
+    environment:
+      REDIS_URL: redis://redis:6379
+      PHOENIX_COLLECTOR_ENDPOINT: http://phoenix:6006
+    depends_on:
+      redis: {condition: service_healthy}
+      phoenix: {condition: service_started}
+
+volumes:
+  phoenix_data:

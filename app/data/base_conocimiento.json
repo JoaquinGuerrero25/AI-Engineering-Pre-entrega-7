@@ -1,0 +1,90 @@
+[
+  {
+    "id": "doc-001",
+    "titulo": "Reseña AuroraBook X14 - Lucía M.",
+    "fuente": "tienda-online/resenas/aurorabook-x14",
+    "tema": "reseñas AuroraBook X14",
+    "calificacion": 5,
+    "texto": "Excelente notebook. La batería dura todo el día y la pantalla es increíble. El teclado es cómodo y el equipo es muy rápido. Lo recomiendo totalmente."
+  },
+  {
+    "id": "doc-002",
+    "titulo": "Reseña AuroraBook X14 - Martín R.",
+    "fuente": "tienda-online/resenas/aurorabook-x14",
+    "tema": "reseñas AuroraBook X14",
+    "calificacion": 4,
+    "texto": "Muy buena relación calidad precio. El rendimiento es bueno y es liviana, aunque el ventilador hace ruido cuando exige el procesador."
+  },
+  {
+    "id": "doc-003",
+    "titulo": "Reseña AuroraBook X14 - Carla P.",
+    "fuente": "tienda-online/resenas/aurorabook-x14",
+    "tema": "reseñas AuroraBook X14",
+    "calificacion": 2,
+    "texto": "Decepcionante. Se calienta mucho y la batería no dura lo que prometen. El soporte técnico fue lento y no resolvió el problema."
+  },
+  {
+    "id": "doc-004",
+    "titulo": "Reseña AuroraBook X14 - Diego S.",
+    "fuente": "tienda-online/resenas/aurorabook-x14",
+    "tema": "reseñas AuroraBook X14",
+    "calificacion": 5,
+    "texto": "Fantástica para programar. Pantalla nítida, buen teclado y arranca rápido. Mejor compra del año."
+  },
+  {
+    "id": "doc-005",
+    "titulo": "Reseña AuroraBook X14 - Nadia V.",
+    "fuente": "tienda-online/resenas/aurorabook-x14",
+    "tema": "reseñas AuroraBook X14",
+    "calificacion": 1,
+    "texto": "Terrible experiencia. Llegó con la pantalla dañada y el reemplazo tardó semanas. Pésimo servicio, no la recomiendo."
+  },
+  {
+    "id": "doc-006",
+    "titulo": "Reseña NovaPad Pro - Hernán T.",
+    "fuente": "tienda-online/resenas/novapad-pro",
+    "tema": "reseñas NovaPad Pro tablet",
+    "calificacion": 3,
+    "texto": "Es una tablet correcta. La pantalla es buena pero la batería es regular y el sistema a veces se traba."
+  },
+  {
+    "id": "doc-007",
+    "titulo": "Reseña NovaPad Pro - Sofía L.",
+    "fuente": "tienda-online/resenas/novapad-pro",
+    "tema": "reseñas NovaPad Pro tablet",
+    "calificacion": 4,
+    "texto": "Me encanta para dibujar. El lápiz responde muy bien y la pantalla es excelente. Recomendable."
+  },
+  {
+    "id": "doc-008",
+    "titulo": "Ventas trimestrales AuroraBook X14 (unidades)",
+    "fuente": "intranet/reportes/ventas-2026-q1-q3",
+    "tema": "ventas AuroraBook X14 unidades trimestre",
+    "calificacion": null,
+    "texto": "Unidades vendidas de la AuroraBook X14: Q1 2026 = 1200 unidades, Q2 2026 = 1500 unidades, Q3 2026 = 1350 unidades. Precio de lista: 950 USD por unidad. Descuento promedio aplicado en Q3: 8%."
+  },
+  {
+    "id": "doc-009",
+    "titulo": "Ventas trimestrales NovaPad Pro (unidades)",
+    "fuente": "intranet/reportes/ventas-2026-q1-q3",
+    "tema": "ventas NovaPad Pro tablet unidades trimestre",
+    "calificacion": null,
+    "texto": "Unidades vendidas de la NovaPad Pro: Q1 2026 = 800 unidades, Q2 2026 = 950 unidades, Q3 2026 = 1100 unidades. Precio de lista: 600 USD por unidad."
+  },
+  {
+    "id": "doc-010",
+    "titulo": "Patrón Supervisor en LangGraph",
+    "fuente": "docs/langgraph/multi-agent-supervisor",
+    "tema": "langgraph supervisor multi-agente arquitectura",
+    "calificacion": null,
+    "texto": "En el patrón Supervisor un nodo central decide qué agente especialista actúa en cada turno. Los especialistas devuelven el control al supervisor, que decide si delegar de nuevo o finalizar. Es importante definir un límite de pasos para evitar bucles infinitos."
+  },
+  {
+    "id": "doc-011",
+    "titulo": "Política de garantía AuroraBook",
+    "fuente": "intranet/politicas/garantia",
+    "tema": "garantía soporte AuroraBook política",
+    "calificacion": null,
+    "texto": "La garantía estándar de la AuroraBook X14 es de 12 meses. El reemplazo por falla de fábrica debe resolverse en un máximo de 10 días hábiles."
+  }
+]
