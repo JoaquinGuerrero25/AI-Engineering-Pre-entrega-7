@@ -116,7 +116,26 @@ Las capturas van en [`screenshots/`](screenshots/). Corrida de 5 peticiones conc
 - [`02-traza-nodos.png`](screenshots/02-traza-nodos.png): una traza abierta con el árbol de nodos del grafo (`supervisor`, `investigador`, `analista`…).
 - [`03-latencia-p95.png`](screenshots/03-latencia-p95.png): pestaña *Metrics* con percentiles de latencia (P50/P95/P99), costo y tokens.
 
-> Esta corrida usó `LLM_PROVIDER=mock`, que no reporta tokens, por lo que el panel de costo aparece vacío. El costo por ejecución requiere una corrida con un LLM real.
+> Esas tres capturas son de una corrida con `LLM_PROVIDER=mock`, que no reporta tokens, por eso el costo sale vacío.
+
+### Corrida real (Gemini, plan gratuito): costo y latencia p95
+
+5 peticiones concurrentes con `LLM_PROVIDER=google`, `LLM_MODEL=gemini-3.5-flash-lite` y `JOB_TIMEOUT_S=1800`
+(proyecto `pre-entrega-7-final` de Phoenix): `DONE=5, FAILED=0`.
+
+| Métrica | Valor |
+|---|---|
+| Latencia extremo a extremo p50 / p95 / máx | 569 s / **693 s** / 693 s |
+| Encolado `POST /tasks` (máx) | 545 ms |
+| Costo total estimado por Phoenix (5 ejecuciones) | **US$ 0,0285** (41.566 tokens: 34.296 de entrada, 7.270 de salida) |
+| Costo promedio por ejecución | ≈ **US$ 0,0057** |
+
+Captura: [`04-costo-p95-real.png`](screenshots/04-costo-p95-real.png) (pestaña *Metrics*: *Cost*, *Trace latency*, *Token usage*).
+
+Notas de lectura:
+- La latencia es alta porque el plan gratuito de Gemini responde lento bajo concurrencia (una sola llamada llegó a tardar ~1 min); el encolado de la API sigue siendo inmediato.
+- El costo lo calcula Phoenix a partir de los tokens y el precio del modelo; es una estimación (en el plan gratuito no se cobra).
+- El p95 de 693 s es el del script de carga (extremo a extremo por job). El gráfico *Trace latency* de Phoenix incluye también las trazas cortas de `GET /tasks/{id}` del polling.
 
 ## Tests
 
