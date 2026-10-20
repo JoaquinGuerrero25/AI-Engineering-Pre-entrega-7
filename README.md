@@ -110,7 +110,13 @@ Luego, en Phoenix (http://localhost:6006 → proyecto `agente-multiagente-prod`)
 3. **Latencia p95**: panel *Latency* (P50/P99 y percentiles) del proyecto.
 4. Nodo que más latencia/tokens consume: ordená los spans de una traza por *Latency* y *Total tokens*.
 
-Las capturas van en [`screenshots/`](screenshots/).
+Las capturas van en [`screenshots/`](screenshots/). Corrida de 5 peticiones concurrentes (`DONE=5`, encolado ≤ 340 ms, p95 extremo a extremo 1.4 s):
+
+- [`01-trazas.png`](screenshots/01-trazas.png): trazas de los jobs en Phoenix (proyecto `pre-entrega-7`).
+- [`02-traza-nodos.png`](screenshots/02-traza-nodos.png): una traza abierta con el árbol de nodos del grafo (`supervisor`, `investigador`, `analista`…).
+- [`03-latencia-p95.png`](screenshots/03-latencia-p95.png): pestaña *Metrics* con percentiles de latencia (P50/P95/P99), costo y tokens.
+
+> Esta corrida usó `LLM_PROVIDER=mock`, que no reporta tokens, por lo que el panel de costo aparece vacío. El costo por ejecución requiere una corrida con un LLM real.
 
 ## Tests
 
